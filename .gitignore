@@ -1,0 +1,5 @@
+.env
+__pycache__
+roster.json
+*.parquet
+.ipynb_checkpoints/
