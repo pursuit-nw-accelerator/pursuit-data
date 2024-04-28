@@ -130,11 +130,11 @@ def write_to_dataset(table: pa.Table) -> None:
     if num_rows < MAX_OPEN_FILES:
         slices = [table]
     else:
-        rows_written = 0
-        while rows_written < num_rows:
-            length = min(SLICE_SIZE, num_rows - rows_written)
-            slices.append(table.slice(offset=rows_written, length=length))
-            rows_written += length
+        rows_sliced = 0
+        while rows_sliced < num_rows:
+            length = min(SLICE_SIZE, num_rows - rows_sliced)
+            slices.append(table.slice(offset=rows_sliced, length=length))
+            rows_sliced += length
 
     # write the data
     print(f"Writing the data in {len(slices)} slice(s)...")
