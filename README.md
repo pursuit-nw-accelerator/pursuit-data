@@ -30,7 +30,7 @@ To set up the Python env for this project:
 1. Navigate to the project root (where `environment.yml` lives)
 1. Create the environment: `conda env create -f environment.yml`
 1. This should create a new environment named `pursuit-data`.
-1. Activate the environment. `conda activate pursuit-data`
+1. Activate the environment: `conda activate pursuit-data`
 
 [Go here](#envs) for more information on Python dependency management.
 
@@ -67,15 +67,17 @@ This will open the interactive Jupyter lab notebook in your browser. You can ope
 ### <a id="envs"></a> Python dependency management and troubleshooting
 
 _Anaconda_
+
 This project uses [Anaconda](https://docs.anaconda.com/free/anaconda/install/) to manage the dependencies ("packages") and version of Python used for the project. In my opinion Anaconda is a lot easier to set up and get up and running than alternatives like `pip`. Pip also doesn't have a concept of environments, which means when you install something it is globally installed and that will cause problems.
 
 _Environments_
-Dependency management in Python is different from the world of npm, usually in a more frustrating way. The general idea is that you will create an "environment" that has the dependencies that you need. You can "activate" that environment for your specific project, and this project has a `environment.yml` file that defines all of the dependencies including the version of Python (sort of like `package-lock.json`).
 
-That environment is not exactly tied to a specific project repo. This is because unlike npm, which saves all dependencies in a `node_modules` directory **inside** your project, Anaconda installs all of your dependencies **outside** your project root (something like `~/opt/anaconda3/envs/<environment name>`).
-Activating an environment means taking over the `PATH` envvars and such so that when you type `python main.py`, your machine will run the version of python installed in the environment directory.
+Dependency management in Python is different from the world of npm, usually in a more frustrating way. The general idea is that you will create an "environment" that has the dependencies that you need. You can "activate" that environment for your specific project. This project has a `environment.yml` file that defines all of the dependencies you'll need for this project's environment, including the version of Python. In that way, the `envrionment.yml` file is sort of like `package-lock.json`.
+
+A conda environment is not exactly tied to a specific project repo. This is because unlike npm, which saves all dependencies in a `node_modules` directory **inside** your project, Anaconda installs all of your dependencies **outside** your project root (something like `~/opt/anaconda3/envs/<environment name>`). Activating an environment means taking over the `PATH` envvars and such so that when you type `python main.py`, your machine will run the version of python installed in the environment directory.
 
 _Troubleshooting_
+
 Because of this, you always have to remember to activate the right environment for your project. One of the most common problems is forgetting to do this and wondering why libraries and modules can't be found.
 
 You can see the active environment by running `conda env list` in the terminal. There will be a `*` next to the active environment. You may also want to look up ways to add the active environment to your command line prompt.
