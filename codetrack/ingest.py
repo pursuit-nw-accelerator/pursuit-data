@@ -144,5 +144,4 @@ def write_to_dataset(table: pa.Table) -> None:
             slices[i],
             root_path=dataset_path,
             partition_cols=["year", "month", "cohort"],
-            max_rows_per_group=100,
         )
