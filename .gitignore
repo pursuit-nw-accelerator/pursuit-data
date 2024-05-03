@@ -5,3 +5,4 @@ roster.json
 .ipynb_checkpoints/
 temp.csv/
 .DS_Store
+*.csv
