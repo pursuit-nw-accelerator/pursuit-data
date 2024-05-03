@@ -3,3 +3,5 @@ __pycache__
 roster.json
 *.parquet
 .ipynb_checkpoints/
+temp.csv/
+.DS_Store
