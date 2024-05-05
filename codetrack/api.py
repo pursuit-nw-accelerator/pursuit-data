@@ -34,7 +34,7 @@ def get_weekly_scores_by_user_id(user_id: int, limit: int = 1000) -> List[Dict]:
     return _get(f"/weeklyScores/{user_id}", limit=limit)
 
 
-def get_weekly_commits_by_user_id(user_id, limit=1000) -> List[Dict]:
+def get_weekly_commits_by_user_id(user_id: int, limit: int = 1000) -> List[Dict]:
     """
     Fetch a user's past weekly commits
     """
