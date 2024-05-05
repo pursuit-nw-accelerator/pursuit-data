@@ -4,7 +4,12 @@ from codetrack.api import refresh_leetcode_points
 
 def main(verbose=False):
     """
-    Get the leetcode id for each user
+    For each user with a codetrack id and leetcode id,
+    refresh the user's leetcode progress in the codetrack db.
+    This is done by making a request for leetcode progress to the
+    Codetrack API, which proxies the request to leetcode.
+    As a side effect, the user's scores in Codetrack's database
+    are updated with the latest progress from leetcode.
     """
     students = None
     with open("rosters/roster.json") as f:
