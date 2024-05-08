@@ -3,12 +3,14 @@
         "name": "Mike Boyle",
         "email": "mb@pursuit.org",
         "id": 47,
-        "cohort": "7.3"
+        "cohort": "7.3",
+        "leetcode_id": null
     },
     {
         "name": "Clara Diaz",
         "email": "cd@pursuit.org",
         "id": 43,
-        "cohort": "11.3"
+        "cohort": "11.3",
+        "leetcode_id": null
     }
 ]
