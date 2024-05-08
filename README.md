@@ -35,7 +35,7 @@ To set up the Python env for this project:
 [Go here](#envs) for more information on Python dependency management.
 
 ### Setting up 2: Roster data
-Create a json file of your class roster and save to `rosters/roster.json`. Use the example file `rosters/roster.example.json` as a template. The fields `id` (codetrack id), `email`, `name`, and `cohort` must be present.
+Create a json file of your class roster and save to `rosters/roster.json`. Use the example file `rosters/roster.example.json` as a template. The fields `id` (codetrack id), `email`, `name`, `cohort`, and `leetcode_id` must be present.
 
 At the moment this is unforunately a manual process. I did this by copying my class guest list from Google calendar. That gets you a big comma-separated string which you can split into name and email address. That still leaves you having to look up codetrack ids and cohorts manually in Codetrack. Everyone's profile page has their codetrack user id in the URL.
 
